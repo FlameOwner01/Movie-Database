@@ -15,7 +15,6 @@ export const searchMovies = async (searchTerm, i) =>{
     const res = await axios.get(
       searchTerm ? `${movie_search_base_url}${searchTerm}&page=${i}`
     : `https://api.themoviedb.org/3/movie/top_rated?api_key=2028ddf941872bebea73ffc161803bd7&language=en-US&page=${i}`);
-    console.log("data: ",res.data);
 return res.data;
   }catch (err){
     console.log(err);
@@ -26,7 +25,6 @@ export const searchSeries = async (searchTerm, i) =>{
     const res = await axios.get(
       searchTerm ? `${serie_search_base_url}${searchTerm}&page=${i}`
     : `https://api.themoviedb.org/3/tv/top_rated?api_key=2028ddf941872bebea73ffc161803bd7&language=en-US&page=${i}`);
-    console.log("data: ",res.data);
 return res.data;
   }catch (err){
     console.log(err);
